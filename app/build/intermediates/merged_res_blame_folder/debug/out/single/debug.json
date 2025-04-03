@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-merged_res-56:/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-main-58:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-merged_res-56:/navigation_nav_graph.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-main-58:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.hanatransaction.app-merged_res-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.hanatransaction.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-merged_res-56:/layout_fragment_home.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-main-58:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-merged_res-56:/layout_item_transaction.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-main-58:/layout/item_transaction.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-merged_res-56:/layout_fragment_new_transaction.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-main-58:/layout/fragment_new_transaction.xml"
+    },
+    {
+        "merged": "com.hanatransaction.app-merged_res-56:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.hanatransaction.app-main-58:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-merged_res-56:/layout_activity_main.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.10/com.hanatransaction.app-main-58:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.hanatransaction.app-merged_res-56:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.hanatransaction.app-main-58:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]

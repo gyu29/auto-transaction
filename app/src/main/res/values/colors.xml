@@ -1,0 +1,32 @@
+<resources>
+    <!-- Hana Bank main colors -->
+    <color name="hana_primary">#008485</color>
+    <color name="hana_primary_dark">#006E6F</color>
+    <color name="hana_primary_light">#4FB6B7</color>
+    <color name="hana_secondary">#25AAE1</color>
+    <color name="hana_accent">#FF5F00</color>
+    
+    <!-- Toss-inspired UI colors -->
+    <color name="toss_blue">#4C9EF1</color>
+    <color name="toss_background">#F8F9FA</color>
+    <color name="toss_card">#FFFFFF</color>
+    <color name="toss_text_primary">#191F28</color>
+    <color name="toss_text_secondary">#8B95A1</color>
+    <color name="toss_divider">#E5E8EB</color>
+    <color name="toss_highlight">#3182F6</color>
+    <color name="toss_error">#F03E3E</color>
+    <color name="toss_success">#37B34A</color>
+    
+    <!-- Common colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="medium_gray">#CCCCCC</color>
+    <color name="dark_gray">#666666</color>
+    
+    <!-- Status colors -->
+    <color name="status_pending">#FFC107</color>
+    <color name="status_completed">#4CAF50</color>
+    <color name="status_failed">#F44336</color>
+</resources> 

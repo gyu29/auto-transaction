@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Hana Transaction</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_transactions">Transactions</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Home Screen -->
+    <string name="greeting">Hello, %1$s</string>
+    <string name="balance">Account Balance</string>
+    <string name="scheduled_transactions">Scheduled Transactions</string>
+    <string name="transactions_history">Transaction History</string>
+    <string name="new_transaction">New Transaction</string>
+    
+    <!-- Transaction Details -->
+    <string name="transaction_amount">Amount</string>
+    <string name="transaction_recipient">Recipient</string>
+    <string name="transaction_account">Account Number</string>
+    <string name="transaction_memo">Memo</string>
+    <string name="transaction_date">Date</string>
+    <string name="transaction_time">Time</string>
+    <string name="transaction_repeat">Repeat</string>
+    
+    <!-- Repeat Options -->
+    <string name="repeat_once">Once</string>
+    <string name="repeat_daily">Daily</string>
+    <string name="repeat_weekly">Weekly</string>
+    <string name="repeat_monthly">Monthly</string>
+    <string name="repeat_yearly">Yearly</string>
+    
+    <!-- Actions -->
+    <string name="save">Save</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    
+    <!-- Settings -->
+    <string name="setting_notifications">Notifications</string>
+    <string name="setting_biometric">Use Biometric Authentication</string>
+    <string name="setting_dark_mode">Dark Mode</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_account">Linked Account</string>
+    <string name="setting_about">About</string>
+    
+    <!-- Messages -->
+    <string name="transaction_scheduled">Transaction scheduled successfully</string>
+    <string name="transaction_failed">Failed to schedule transaction</string>
+    <string name="transaction_deleted">Transaction deleted</string>
+    <string name="auth_required">Authentication required</string>
+    <string name="loading">Loading…</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="no_transactions">No transactions yet</string>
+    <string name="auth_success">Authentication successful</string>
+    <string name="auth_failed">Authentication failed</string>
+</resources> 
