@@ -23,30 +23,28 @@ abstract class AuthenticatedFragment : Fragment() {
     }
     
     protected suspend fun requireAuthentication(): Boolean {
-        return viewLifecycleOwner.lifecycleScope.launch {
-            try {
-                // Check if biometric auth is enabled for the user
-                val user = userRepository.getCurrentUserSync()
-                if (user?.useBiometricAuth != true) {
-                    return@launch true
-                }
-                
-                // Check if device supports biometric auth
-                if (!biometricAuthManager.canAuthenticate()) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Biometric authentication is not available on this device",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    return@launch false
-                }
-                
-                // Authenticate
-                biometricAuthManager.authenticate(requireActivity())
-            } catch (e: Exception) {
-                Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
-                false
+        return try {
+            // Check if biometric auth is enabled for the user
+            val user = userRepository.getCurrentUserSync()
+            if (user?.useBiometricAuth != true) {
+                return true
             }
+            
+            // Check if device supports biometric auth
+            if (!biometricAuthManager.canAuthenticate()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Biometric authentication is not available on this device",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return false
+            }
+            
+            // Authenticate
+            biometricAuthManager.authenticate(requireActivity())
+        } catch (e: Exception) {
+            Toast.makeText(requireContext(), e.message, Toast.LENGTH_SHORT).show()
+            false
         }
     }
 } 

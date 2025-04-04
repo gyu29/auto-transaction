@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.hanatransaction.R
 import com.hanatransaction.data.model.Transaction
 import com.hanatransaction.databinding.ItemTransactionBinding
 import java.text.SimpleDateFormat
@@ -35,7 +36,7 @@ class TransactionAdapter(
 
         init {
             binding.root.setOnClickListener {
-                val position = bindingAdapterPosition
+                val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     onTransactionClick(getItem(position))
                 }

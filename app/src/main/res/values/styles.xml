@@ -37,42 +37,42 @@
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">28sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     
     <style name="TextAppearance.HanaTransaction.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     
     <style name="TextAppearance.HanaTransaction.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     
     <style name="TextAppearance.HanaTransaction.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">sans-serif</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     
     <style name="TextAppearance.HanaTransaction.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">sans-serif</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/toss_text_secondary</item>
+        <item name="android:textColor">@color/dark_gray</item>
     </style>
     
     <style name="TextAppearance.HanaTransaction.Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">sans-serif</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/toss_text_secondary</item>
+        <item name="android:textColor">@color/dark_gray</item>
     </style>
     
     <!-- Shape appearances -->
@@ -103,6 +103,22 @@
         <item name="elevation">0dp</item>
     </style>
     
+    <!-- TextInput styles -->
+    <style name="Widget.HanaTransaction.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/hana_primary</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="hintTextColor">@color/dark_gray</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="boxBackgroundColor">@color/light_gray</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+    </style>
+
+    <style name="Widget.HanaTransaction.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+    </style>
+    
     <style name="Widget.HanaTransaction.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textSize">16sp</item>
         <item name="android:textAllCaps">false</item>
@@ -112,7 +128,20 @@
     <style name="Widget.HanaTransaction.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardElevation">2dp</item>
         <item name="cardCornerRadius">12dp</item>
-        <item name="cardBackgroundColor">@color/toss_card</item>
+        <item name="cardBackgroundColor">@color/white</item>
         <item name="contentPadding">16dp</item>
+    </style>
+    
+    <!-- Full Screen Dialog -->
+    <style name="Theme.HanaTransaction.FullScreenDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
+        <item name="android:statusBarColor">@color/toss_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="colorPrimary">@color/hana_primary</item>
+        <item name="colorControlActivated">@color/hana_primary</item>
     </style>
 </resources> 

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toss_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nav_settings"
+                android:textAppearance="@style/TextAppearance.HanaTransaction.Headline2"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Account Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_account"
+                            android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchBiometric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/settings_biometric_login"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonChangePassword"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/settings_change_password"
+                            android:textColor="@color/hana_primary" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonLogout"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/settings_logout"
+                            android:textColor="@color/status_failed" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Appearance Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_appearance"
+                            android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchDarkMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/settings_dark_mode"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchSystemTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/settings_use_system_theme"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Notifications Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_notifications"
+                            android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchTransactionAlerts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/settings_transaction_alerts"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchPaymentReminders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/settings_payment_reminders"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Security Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_security"
+                            android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchRequirePin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/settings_require_pin"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonChangePin"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/settings_change_pin"
+                            android:textColor="@color/hana_primary" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- App Info Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_about"
+                            android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/app_version"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonPrivacyPolicy"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/settings_privacy_policy"
+                            android:textColor="@color/hana_primary" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonTermsOfService"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/settings_terms_of_service"
+                            android:textColor="@color/hana_primary" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout> 

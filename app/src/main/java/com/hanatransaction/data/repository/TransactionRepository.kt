@@ -115,9 +115,13 @@ class TransactionRepository(private val transactionDao: TransactionDao) {
     /**
      * Calculate the next execution date based on the repeat interval
      */
-    private fun calculateNextExecutionDate(baseDate: Date, repeatInterval: RepeatInterval, lastExecutedDate: Date? = null): Date {
+    private fun calculateNextExecutionDate(
+        baseDate: Date,
+        repeatInterval: RepeatInterval,
+        lastExecutionDate: Date? = null
+    ): Date {
         val calendar = Calendar.getInstance()
-        calendar.time = lastExecutedDate ?: baseDate
+        calendar.time = lastExecutionDate ?: baseDate
         
         when (repeatInterval) {
             RepeatInterval.ONCE -> return baseDate // No next date for one-time transactions
@@ -128,5 +132,23 @@ class TransactionRepository(private val transactionDao: TransactionDao) {
         }
         
         return calendar.time
+    }
+    
+    /**
+     * Clear all transactions 
+     */
+    suspend fun clearAllTransactions() {
+        withContext(Dispatchers.IO) {
+            transactionDao.clearAllTransactions()
+        }
+    }
+    
+    /**
+     * Clear completed transactions
+     */
+    suspend fun clearCompletedTransactions() {
+        withContext(Dispatchers.IO) {
+            transactionDao.clearCompletedTransactions()
+        }
     }
 } 

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".ui.auth.LoginActivity">
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/ic_notification"
+        android:tint="@color/hana_primary"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pin_enter"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- PIN dots -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <View
+            android:id="@+id/pinDot1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/pin_dot"
+            android:enabled="false"/>
+
+        <View
+            android:id="@+id/pinDot2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/pin_dot"
+            android:enabled="false"/>
+
+        <View
+            android:id="@+id/pinDot3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/pin_dot"
+            android:enabled="false"/>
+
+        <View
+            android:id="@+id/pinDot4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/pin_dot"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/status_failed"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:text="Wrong PIN"
+        android:layout_marginBottom="24dp" />
+
+    <!-- PIN keypad -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonOne"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="1"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonTwo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="2"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonThree"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="3"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFour"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="4"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFive"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="5"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSix"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="6"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSeven"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="7"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonEight"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="8"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonNine"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="9"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancel"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            app:icon="@android:drawable/ic_menu_close_clear_cancel"
+            app:iconTint="@color/dark_gray"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonZero"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:text="0"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="4dp"
+            app:icon="@android:drawable/ic_input_delete"
+            app:iconTint="@color/dark_gray"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="36dp"/>
+    </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonBiometric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/use_biometric"
+        app:icon="@android:drawable/ic_partial_secure"
+        app:iconTint="@color/hana_primary"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout> 

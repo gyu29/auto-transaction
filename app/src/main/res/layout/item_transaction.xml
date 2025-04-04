@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_marginVertical="4dp"
     app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/white"
     app:cardElevation="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +20,7 @@
             android:id="@+id/textViewRecipientName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.HanaTransaction.Body1"
             app:layout_constraintEnd_toStartOf="@+id/textViewAmount"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:textColor="@color/dark_gray"
             android:textAppearance="@style/TextAppearance.HanaTransaction.Body2"
             app:layout_constraintEnd_toStartOf="@+id/textViewAmount"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +45,7 @@
             android:id="@+id/textViewAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textAppearance="@style/TextAppearance.HanaTransaction.Body1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -53,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:textColor="@color/dark_gray"
             android:textAppearance="@style/TextAppearance.HanaTransaction.Caption"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewAmount"

@@ -15,7 +15,12 @@
             app:destination="@id/newTransactionFragment" />
         <action
             android:id="@+id/action_homeFragment_to_transactionDetailFragment"
-            app:destination="@id/transactionDetailFragment" />
+            app:destination="@id/transactionDetailFragment">
+            <argument
+                android:name="transactionId"
+                app:argType="long"
+                android:defaultValue="-1L" />
+        </action>
     </fragment>
 
     <fragment
@@ -25,14 +30,28 @@
         tools:layout="@layout/fragment_transactions">
         <action
             android:id="@+id/action_transactionsFragment_to_transactionDetailFragment"
-            app:destination="@id/transactionDetailFragment" />
+            app:destination="@id/transactionDetailFragment">
+            <argument
+                android:name="transactionId"
+                app:argType="long"
+                android:defaultValue="-1L" />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.hanatransaction.ui.settings.SettingsFragment"
         android:label="@string/nav_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_pinFragment"
+            app:destination="@id/pinFragment">
+            <argument
+                android:name="mode"
+                app:argType="integer"
+                android:defaultValue="2" />
+        </action>
+    </fragment>
 
     <fragment
         android:id="@+id/newTransactionFragment"
@@ -53,7 +72,19 @@
         tools:layout="@layout/fragment_transaction_detail">
         <argument
             android:name="transactionId"
-            app:argType="long" />
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.hanatransaction.ui.auth.PinFragment"
+        android:label="PIN Authentication"
+        tools:layout="@layout/fragment_pin">
+        <argument
+            android:name="mode"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
 
 </navigation> 

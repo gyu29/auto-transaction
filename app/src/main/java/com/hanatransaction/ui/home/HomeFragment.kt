@@ -118,8 +118,10 @@ class HomeFragment : Fragment() {
     }
     
     private fun navigateToTransactionDetail(transactionId: Long) {
-        val action = HomeFragmentDirections.actionHomeFragmentToTransactionDetailFragment(transactionId)
-        findNavController().navigate(action)
+        val bundle = Bundle().apply {
+            putLong("transactionId", transactionId)
+        }
+        findNavController().navigate(R.id.action_homeFragment_to_transactionDetailFragment, bundle)
     }
     
     override fun onDestroyView() {

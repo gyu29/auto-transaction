@@ -21,11 +21,10 @@ class HanaTransactionApp : Application(), Configuration.Provider {
     }
     
     // WorkManager configuration
-    override fun getWorkManagerConfiguration(): Configuration {
-        return Configuration.Builder()
+    override val workManagerConfiguration: Configuration
+        get() = Configuration.Builder()
             .setMinimumLoggingLevel(android.util.Log.INFO)
             .build()
-    }
     
     companion object {
         lateinit var instance: HanaTransactionApp

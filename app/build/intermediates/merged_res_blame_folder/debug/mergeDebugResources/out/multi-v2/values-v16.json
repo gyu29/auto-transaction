@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "com.hanatransaction.app-mergeDebugResources-54:/values-v16/values-v16.xml",
+            "outputFile": "com.hanatransaction.app-mergeDebugResources-56:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/02013cccaa98f7eb62628ce23a8bdb67/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/05513115d184a8d928745d8015fea8b0/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/3c449713a25389ce8945468e1614c205/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/806883af75e868fec66fa339d443b41d/transformed/core-1.12.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

@@ -1,38 +1,78 @@
 [
     {
-        "merged": "com.hanatransaction.app-debug-56:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/drawable/ic_launcher_foreground.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/drawable_pin_dot.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/drawable/pin_dot.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/navigation_nav_graph.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/navigation/nav_graph.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_settings.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_settings.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_pin.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_pin.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/layout_fragment_home.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/layout/fragment_home.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_transactions.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_transactions.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/menu/bottom_nav_menu.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/navigation_nav_graph.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/navigation/nav_graph.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/layout_fragment_new_transaction.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/layout/fragment_new_transaction.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/drawable_ic_arrow_back.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/drawable/ic_arrow_back.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/layout_activity_main.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/layout/activity_main.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-56:/layout_item_transaction.xml.flat",
-        "source": "com.hanatransaction.app-main-58:/layout/item_transaction.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_activity_main.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_transaction_detail.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_transaction_detail.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_new_transaction.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_new_transaction.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_legal_document.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_legal_document.xml"
+    },
+    {
+        "merged": "com.hanatransaction.app-debug-58:/layout_activity_login.xml.flat",
+        "source": "com.hanatransaction.app-main-60:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_activity_login.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/drawable_ic_notification.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_item_transaction.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/item_transaction.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_home.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_home.xml"
     }
 ]

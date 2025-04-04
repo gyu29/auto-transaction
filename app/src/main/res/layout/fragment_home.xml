@@ -36,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/white"
                     app:cardElevation="2dp">
 
                     <LinearLayout
@@ -48,6 +49,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/balance"
+                            android:textColor="@color/black"
                             android:textAppearance="@style/TextAppearance.HanaTransaction.Body2" />
 
                         <TextView
@@ -55,6 +57,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
+                            android:textColor="@color/black"
                             android:textAppearance="@style/TextAppearance.HanaTransaction.Headline2"
                             tools:text="₩1,000,000" />
 
@@ -68,6 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="@string/scheduled_transactions"
+                    android:textColor="@color/black"
                     android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1" />
 
                 <TextView
@@ -76,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/no_transactions"
+                    android:textColor="@color/dark_gray"
                     android:textAppearance="@style/TextAppearance.HanaTransaction.Body2"
                     android:visibility="gone"
                     tools:visibility="visible" />
@@ -95,6 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="@string/transactions_history"
+                    android:textColor="@color/black"
                     android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1" />
 
                 <TextView
@@ -103,6 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/no_transactions"
+                    android:textColor="@color/dark_gray"
                     android:textAppearance="@style/TextAppearance.HanaTransaction.Body2"
                     android:visibility="gone"
                     tools:visibility="visible" />

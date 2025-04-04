@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/buttonBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transaction_details"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonBack" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/black"
+                tools:text="₩50,000" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textColor="@color/black"
+                        tools:text="Lunch at Restaurant" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/date"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textColor="@color/black"
+                        tools:text="2024-03-15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/status"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textColor="@color/black"
+                        tools:text="PENDING" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/category"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textColor="@color/black"
+                        tools:text="Food" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/payment_method"
+                        android:textAppearance="?attr/textAppearanceSubtitle1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textViewPaymentMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textColor="@color/black"
+                        tools:text="Credit Card" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCancelTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/cancel_transaction"
+                android:visibility="gone"
+                app:backgroundTint="@color/design_default_color_error"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

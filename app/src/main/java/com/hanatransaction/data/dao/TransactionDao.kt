@@ -48,4 +48,10 @@ interface TransactionDao {
     
     @Query("UPDATE transactions SET nextExecutionDate = :nextDate WHERE id = :id")
     suspend fun updateNextExecutionDate(id: Long, nextDate: Date)
+    
+    @Query("DELETE FROM transactions")
+    suspend fun clearAllTransactions()
+    
+    @Query("DELETE FROM transactions WHERE isCompleted = 1")
+    suspend fun clearCompletedTransactions()
 } 

@@ -1,29 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "com.hanatransaction.app-mergeDebugResources-54:/values-v23/values-v23.xml",
+            "outputFile": "com.hanatransaction.app-mergeDebugResources-56:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/2c5ab8deb64657db9e0007cf697dd8ec/transformed/material-1.11.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/3b8ce399d584471efa81ed949abb3c57/transformed/work-runtime-2.9.0/res/values-v23/values-v23.xml",
                     "from": {
-                        "startLines": "2,5,9,13,16,19,22,25,28,32",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,271,413,574,784,991,1198,1401,1603,1868",
-                        "endLines": "4,8,12,15,18,21,24,27,31,35",
-                        "endColumns": "10,10,10,10,10,10,10,10,10,10",
-                        "endOffsets": "266,408,569,779,986,1193,1396,1598,1863,2136"
-                    },
-                    "to": {
-                        "startLines": "55,58,62,66,69,72,75,78,81,85",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3511,3727,3869,4030,4240,4447,4654,4857,5059,5324",
-                        "endLines": "57,61,65,68,71,74,77,80,84,88",
-                        "endColumns": "10,10,10,10,10,10,10,10,10,10",
-                        "endOffsets": "3722,3864,4025,4235,4442,4649,4852,5054,5319,5592"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
                     }
                 },
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/c8183e251191d779d14ba3d275125378/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/7efb2b06be49555154b9d5b12013cf60/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -42,7 +33,26 @@
                     }
                 },
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/02013cccaa98f7eb62628ce23a8bdb67/transformed/appcompat-1.6.1/res/values-v23/values-v23.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/e4460e1d0962166ca5dba9fc35b21cd0/transformed/material-1.11.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,5,9,13,16,19,22,25,28,32",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,271,413,574,784,991,1198,1401,1603,1868",
+                        "endLines": "4,8,12,15,18,21,24,27,31,35",
+                        "endColumns": "10,10,10,10,10,10,10,10,10,10",
+                        "endOffsets": "266,408,569,779,986,1193,1396,1598,1863,2136"
+                    },
+                    "to": {
+                        "startLines": "55,58,62,66,69,72,75,78,81,85",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3511,3727,3869,4030,4240,4447,4654,4857,5059,5324",
+                        "endLines": "57,61,65,68,71,74,77,80,84,88",
+                        "endColumns": "10,10,10,10,10,10,10,10,10,10",
+                        "endOffsets": "3722,3864,4025,4235,4442,4649,4852,5054,5319,5592"
+                    }
+                },
+                {
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/3c449713a25389ce8945468e1614c205/transformed/appcompat-1.6.1/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -58,16 +68,6 @@
                         "endLines": "4,5,6,7,21,35,36,37,40,44,45,46,47,51",
                         "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
                         "endOffsets": "314,449,524,611,1349,2099,2218,2345,2567,2791,2906,3013,3126,3356"
-                    }
-                },
-                {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/b782afb1d047128e5268b2aad0479057/transformed/work-runtime-2.9.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,121",
-                        "endColumns": "65,62",
-                        "endOffsets": "116,179"
                     }
                 }
             ]

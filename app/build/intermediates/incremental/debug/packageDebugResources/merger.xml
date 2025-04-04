@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res"><file name="ic_launcher_foreground" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/drawable/ic_launcher_foreground.xml" qualifiers="" type="drawable"/><file name="fragment_home" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_home.xml" qualifiers="" type="layout"/><file name="fragment_new_transaction" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_new_transaction.xml" qualifiers="" type="layout"/><file name="activity_main" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file name="item_transaction" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/item_transaction.xml" qualifiers="" type="layout"/><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/colors.xml" qualifiers=""><color name="hana_primary">#008485</color><color name="hana_primary_dark">#006E6F</color><color name="hana_primary_light">#4FB6B7</color><color name="hana_secondary">#25AAE1</color><color name="hana_accent">#FF5F00</color><color name="toss_blue">#4C9EF1</color><color name="toss_background">#F8F9FA</color><color name="toss_card">#FFFFFF</color><color name="toss_text_primary">#191F28</color><color name="toss_text_secondary">#8B95A1</color><color name="toss_divider">#E5E8EB</color><color name="toss_highlight">#3182F6</color><color name="toss_error">#F03E3E</color><color name="toss_success">#37B34A</color><color name="white">#FFFFFF</color><color name="black">#000000</color><color name="transparent">#00000000</color><color name="light_gray">#F5F5F5</color><color name="medium_gray">#CCCCCC</color><color name="dark_gray">#666666</color><color name="status_pending">#FFC107</color><color name="status_completed">#4CAF50</color><color name="status_failed">#F44336</color></file><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/styles.xml" qualifiers=""><style name="Theme.HanaTransaction" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res"><file name="ic_launcher_foreground" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/drawable/ic_launcher_foreground.xml" qualifiers="" type="drawable"/><file name="ic_arrow_back" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/drawable/ic_arrow_back.xml" qualifiers="" type="drawable"/><file name="fragment_transaction_detail" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_transaction_detail.xml" qualifiers="" type="layout"/><file name="fragment_home" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_home.xml" qualifiers="" type="layout"/><file name="fragment_new_transaction" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_new_transaction.xml" qualifiers="" type="layout"/><file name="activity_main" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file name="item_transaction" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/item_transaction.xml" qualifiers="" type="layout"/><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/colors.xml" qualifiers=""><color name="hana_primary">#008485</color><color name="hana_primary_dark">#006E6F</color><color name="hana_primary_light">#4FB6B7</color><color name="hana_secondary">#25AAE1</color><color name="hana_accent">#FF5F00</color><color name="toss_blue">#4C9EF1</color><color name="toss_background">#F8F9FA</color><color name="toss_card">#FFFFFF</color><color name="toss_text_primary">#191F28</color><color name="toss_text_secondary">#8B95A1</color><color name="toss_divider">#E5E8EB</color><color name="toss_highlight">#3182F6</color><color name="toss_error">#F03E3E</color><color name="toss_success">#37B34A</color><color name="white">#FFFFFF</color><color name="black">#000000</color><color name="transparent">#00000000</color><color name="light_gray">#F5F5F5</color><color name="medium_gray">#CCCCCC</color><color name="dark_gray">#666666</color><color name="status_pending">#FFC107</color><color name="status_completed">#4CAF50</color><color name="status_failed">#F44336</color></file><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/styles.xml" qualifiers=""><style name="Theme.HanaTransaction" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/hana_primary</item>
         <item name="colorPrimaryVariant">@color/hana_primary_dark</item>
@@ -33,32 +33,32 @@
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">28sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style><style name="TextAppearance.HanaTransaction.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style><style name="TextAppearance.HanaTransaction.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">sans-serif-medium</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style><style name="TextAppearance.HanaTransaction.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">sans-serif</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/toss_text_primary</item>
+        <item name="android:textColor">@color/black</item>
     </style><style name="TextAppearance.HanaTransaction.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">sans-serif</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/toss_text_secondary</item>
+        <item name="android:textColor">@color/dark_gray</item>
     </style><style name="TextAppearance.HanaTransaction.Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">sans-serif</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/toss_text_secondary</item>
+        <item name="android:textColor">@color/dark_gray</item>
     </style><style name="ShapeAppearance.HanaTransaction.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8dp</item>
@@ -83,6 +83,110 @@
     </style><style name="Widget.HanaTransaction.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardElevation">2dp</item>
         <item name="cardCornerRadius">12dp</item>
-        <item name="cardBackgroundColor">@color/toss_card</item>
+        <item name="cardBackgroundColor">@color/white</item>
         <item name="contentPadding">16dp</item>
-    </style></file><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Hana Transaction</string><string name="nav_home">Home</string><string name="nav_transactions">Transactions</string><string name="nav_settings">Settings</string><string name="greeting">Hello, %1$s</string><string name="balance">Account Balance</string><string name="scheduled_transactions">Scheduled Transactions</string><string name="transactions_history">Transaction History</string><string name="new_transaction">New Transaction</string><string name="transaction_amount">Amount</string><string name="transaction_recipient">Recipient</string><string name="transaction_account">Account Number</string><string name="transaction_memo">Memo</string><string name="transaction_date">Date</string><string name="transaction_time">Time</string><string name="transaction_repeat">Repeat</string><string name="repeat_once">Once</string><string name="repeat_daily">Daily</string><string name="repeat_weekly">Weekly</string><string name="repeat_monthly">Monthly</string><string name="repeat_yearly">Yearly</string><string name="save">Save</string><string name="confirm">Confirm</string><string name="cancel">Cancel</string><string name="edit">Edit</string><string name="delete">Delete</string><string name="setting_notifications">Notifications</string><string name="setting_biometric">Use Biometric Authentication</string><string name="setting_dark_mode">Dark Mode</string><string name="setting_language">Language</string><string name="setting_account">Linked Account</string><string name="setting_about">About</string><string name="transaction_scheduled">Transaction scheduled successfully</string><string name="transaction_failed">Failed to schedule transaction</string><string name="transaction_deleted">Transaction deleted</string><string name="auth_required">Authentication required</string><string name="loading">Loading…</string><string name="error_occurred">An error occurred</string><string name="no_transactions">No transactions yet</string><string name="auth_success">Authentication successful</string><string name="auth_failed">Authentication failed</string></file><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/ic_launcher_background.xml" qualifiers=""><color name="ic_launcher_background">#FFFFFF</color></file><file name="nav_graph" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/navigation/nav_graph.xml" qualifiers="" type="navigation"/><file name="bottom_nav_menu" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/menu/bottom_nav_menu.xml" qualifiers="" type="menu"/><file name="ic_launcher" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="ic_launcher_round" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" qualifiers="anydpi-v26" type="mipmap"/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>
+    </style><style name="Widget.HanaTransaction.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/hana_primary</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="hintTextColor">@color/dark_gray</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="boxBackgroundColor">@color/light_gray</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+    </style><style name="Widget.HanaTransaction.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+    </style><style name="Theme.HanaTransaction.FullScreenDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
+        <item name="android:statusBarColor">@color/toss_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="colorPrimary">@color/hana_primary</item>
+        <item name="colorControlActivated">@color/hana_primary</item>
+    </style></file><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Hana Transaction</string><string name="nav_home">Home</string><string name="nav_transactions">Transactions</string><string name="nav_settings">Settings</string><string name="greeting">Hello, %1$s</string><string name="balance">Account Balance</string><string name="scheduled_transactions">Scheduled Transactions</string><string name="transactions_history">Transaction History</string><string name="new_transaction">New Transaction</string><string name="transaction_amount">Amount</string><string name="transaction_recipient">Recipient</string><string name="transaction_account">Account Number</string><string name="transaction_memo">Memo</string><string name="transaction_date">Date</string><string name="transaction_time">Time</string><string name="transaction_repeat">Repeat</string><string name="repeat_once">Once</string><string name="repeat_daily">Daily</string><string name="repeat_weekly">Weekly</string><string name="repeat_monthly">Monthly</string><string name="repeat_yearly">Yearly</string><string name="save">Save</string><string name="confirm">Confirm</string><string name="cancel">Cancel</string><string name="edit">Edit</string><string name="delete">Delete</string><string name="setting_notifications">Notifications</string><string name="setting_biometric">Use Biometric Authentication</string><string name="setting_dark_mode">Dark Mode</string><string name="setting_language">Language</string><string name="setting_account">Linked Account</string><string name="setting_about">About</string><string name="transaction_scheduled">Transaction scheduled successfully</string><string name="transaction_failed">Failed to schedule transaction</string><string name="transaction_deleted">Transaction deleted</string><string name="auth_required">Authentication required</string><string name="loading">Loading…</string><string name="error_occurred">An error occurred</string><string name="no_transactions">No transactions yet</string><string name="auth_success">Authentication successful</string><string name="auth_failed">Authentication failed</string><string name="transaction_details">Transaction Details</string><string name="description">Description</string><string name="date">Date</string><string name="status">Status</string><string name="category">Category</string><string name="payment_method">Payment Method</string><string name="back">Back</string><string name="confirm_cancel">Are you sure you want to cancel this transaction?</string><string name="yes">Yes</string><string name="transaction_cancelled">Transaction cancelled</string><string name="no">No</string><string name="transaction_cancel_failed">Failed to cancel transaction</string><string name="cancel_transaction">Cancel Transaction</string><string name="settings_require_pin">Require PIN on start</string><string name="settings_terms_of_service">Terms of Service</string><string name="app_version">Version 1.0.0</string><string name="settings_change_pin">Change PIN</string><string name="settings_notifications">Notifications</string><string name="settings_change_password">Change Password</string><string name="settings_logout">Logout</string><string name="settings_biometric_login">Use biometric login</string><string name="clear_completed_transactions">Clear Completed Transactions</string><string name="settings_appearance">Appearance</string><string name="clear_transactions">Clear Transactions</string><string name="confirm_clear_transactions">Are you sure you want to clear transactions?</string><string name="settings_use_system_theme">Use System Theme</string><string name="settings_transaction_alerts">Transaction Alerts</string><string name="settings_account">Account</string><string name="settings_dark_mode">Dark Mode</string><string name="transactions_cleared">Transactions cleared successfully</string><string name="settings_security">Security</string><string name="settings_about">About</string><string name="clear_all_transactions">Clear All Transactions</string><string name="settings_privacy_policy">Privacy Policy</string><string name="settings_payment_reminders">Payment Reminders</string><string name="settings_saved">Settings saved</string><string name="pin_new">Enter new PIN</string><string name="terms_of_service_content">
+        <![CDATA[
+        <h1>Terms of Service</h1>
+        <p>Last updated: May 15, 2024</p>
+        
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using the Hana Transaction app, you agree to be bound by these Terms of Service.</p>
+        
+        <h2>2. Description of Service</h2>
+        <p>Hana Transaction provides a platform for managing and scheduling bank transactions, including one-time and recurring payments.</p>
+        
+        <h2>3. User Accounts</h2>
+        <p>You must create an account to use our service. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+        
+        <h2>4. User Conduct</h2>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Use the service for any illegal purpose</li>
+            <li>Interfere with the operation of the service</li>
+            <li>Attempt to gain unauthorized access to any part of the service</li>
+            <li>Use the service to transmit harmful code or malware</li>
+        </ul>
+        
+        <h2>5. Intellectual Property</h2>
+        <p>All content, features, and functionality of the Hana Transaction app are owned by us and are protected by copyright, trademark, and other intellectual property laws.</p>
+        
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>The service is provided "as is" and "as available" without warranties of any kind.</p>
+        
+        <h2>7. Limitation of Liability</h2>
+        <p>We shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the service.</p>
+        
+        <h2>8. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of South Korea.</p>
+        
+        <h2>9. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Your continued use of the service after such modifications constitutes your acceptance of the modified Terms.</p>
+        
+        <h2>10. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at terms@hanatransaction.com</p>
+        ]]>
+    </string><string name="notification_channel_transactions_desc">Alerts for new and completed transactions</string><string name="biometric_prompt_subtitle">Log in using your biometric credential</string><string name="password_current">Current Password</string><string name="notification_transaction_text">%1$s has been sent to %2$s</string><string name="privacy_policy_title">Privacy Policy</string><string name="notification_channel_transactions">Transaction Alerts</string><string name="logout_confirm">Are you sure you want to log out?</string><string name="logout_successful">You have been logged out</string><string name="biometric_prompt_title">Biometric Authentication</string><string name="notification_channel_reminders_desc">Reminders for upcoming scheduled payments</string><string name="notification_reminder_title">Payment Reminder</string><string name="pin_created">PIN created successfully</string><string name="notification_channel_reminders">Payment Reminders</string><string name="pin_changed">PIN changed successfully</string><string name="biometric_error">Biometric error: %1$s</string><string name="password_not_match">Passwords do not match</string><string name="password_confirm">Confirm Password</string><string name="pin_enter">Enter PIN</string><string name="privacy_policy_content">
+        <![CDATA[
+        <h1>Privacy Policy</h1>
+        <p>Last updated: May 15, 2024</p>
+        
+        <h2>Introduction</h2>
+        <p>Welcome to Hana Transaction. We respect your privacy and are committed to protecting your personal data.</p>
+        
+        <h2>1. Information We Collect</h2>
+        <p>We collect the following types of information:</p>
+        <ul>
+            <li>Personal identification information (Name, email address, phone number)</li>
+            <li>Financial information (Bank account details, transaction history)</li>
+            <li>Device information (IP address, device type, operating system)</li>
+        </ul>
+        
+        <h2>2. How We Use Your Information</h2>
+        <p>We use your personal data for the following purposes:</p>
+        <ul>
+            <li>To provide and maintain our service</li>
+            <li>To process and complete transactions</li>
+            <li>To send you alerts and notifications</li>
+            <li>To improve our service and user experience</li>
+            <li>To comply with legal obligations</li>
+        </ul>
+        
+        <h2>3. Data Security</h2>
+        <p>We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.</p>
+        
+        <h2>4. Your Privacy Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your personal data</li>
+            <li>Request correction of your personal data</li>
+            <li>Request deletion of your personal data</li>
+            <li>Object to processing of your personal data</li>
+            <li>Request restriction of processing your personal data</li>
+        </ul>
+        
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at privacy@hanatransaction.com</p>
+        ]]>
+    </string><string name="notification_reminder_text">Upcoming payment of %1$s to %2$s</string><string name="password_wrong">Incorrect password</string><string name="notification_transaction_title">Transaction Completed</string><string name="biometric_success">Authentication successful</string><string name="terms_of_service_title">Terms of Service</string><string name="password_requirements">Password must be at least 8 characters and contain at least one uppercase letter and one number</string><string name="pin_wrong">Wrong PIN</string><string name="pin_not_match">PINs don\'t match</string><string name="biometric_prompt_description">Place your finger on the sensor or use face unlock to verify your identity</string><string name="pin_confirm">Confirm PIN</string><string name="pin_setup">Set up PIN</string><string name="biometric_not_available">Biometric authentication not available</string><string name="pin_current">Enter current PIN</string><string name="biometric_failed">Biometric authentication failed</string><string name="password_new">New Password</string><string name="password_changed">Password changed successfully</string><string name="error_empty_fields">Username and password cannot be empty</string><string name="use_biometric">Use Biometric</string></file><file path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/values/ic_launcher_background.xml" qualifiers=""><color name="ic_launcher_background">#FFFFFF</color></file><file name="nav_graph" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/navigation/nav_graph.xml" qualifiers="" type="navigation"/><file name="bottom_nav_menu" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/menu/bottom_nav_menu.xml" qualifiers="" type="menu"/><file name="ic_launcher" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="ic_launcher_round" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="fragment_settings" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_settings.xml" qualifiers="" type="layout"/><file name="fragment_transactions" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_transactions.xml" qualifiers="" type="layout"/><file name="ic_notification" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/drawable/ic_notification.xml" qualifiers="" type="drawable"/><file name="pin_dot" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/drawable/pin_dot.xml" qualifiers="" type="drawable"/><file name="fragment_legal_document" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_legal_document.xml" qualifiers="" type="layout"/><file name="fragment_pin" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/fragment_pin.xml" qualifiers="" type="layout"/><file name="activity_login" path="/Users/geney/Documents/GitHub/auto-transaction/app/src/main/res/layout/activity_login.xml" qualifiers="" type="layout"/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/geney/Documents/GitHub/auto-transaction/app/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>

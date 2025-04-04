@@ -3,6 +3,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
         android:name=".HanaTransactionApp"
@@ -14,12 +16,21 @@
         android:theme="@style/Theme.HanaTransaction">
         
         <activity
-            android:name=".ui.MainActivity"
-            android:exported="true">
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity="">
         </activity>
         
         <provider

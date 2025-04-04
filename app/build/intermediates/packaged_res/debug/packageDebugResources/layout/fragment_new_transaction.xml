@@ -19,13 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/transaction_recipient"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/Widget.HanaTransaction.TextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextRecipientName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
+                android:textColor="@color/black"
                 tools:text="John Doe" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -36,13 +37,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/transaction_account"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/Widget.HanaTransaction.TextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextAccountNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:textColor="@color/black"
                 tools:text="123-456-789" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -53,13 +55,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/transaction_amount"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/Widget.HanaTransaction.TextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
+                android:textColor="@color/black"
                 tools:text="50000" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/transaction_memo"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/Widget.HanaTransaction.TextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextMemo"
@@ -78,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
                 android:minLines="2"
+                android:textColor="@color/black"
                 tools:text="Monthly rent payment" />
 
         </com.google.android.material.textfield.TextInputLayout>

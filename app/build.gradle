@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -39,8 +40,19 @@ android {
     }
 }
 
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
 kapt {
     correctErrorTypes true
+    arguments {
+        arg("room.schemaLocation", "$projectDir/schemas")
+        arg("room.incremental", "true")
+        arg("room.expandProjection", "true")
+    }
     javacOptions {
         option("-source", "17")
         option("-target", "17")
@@ -52,6 +64,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     
     // Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
@@ -66,11 +79,19 @@ dependencies {
     implementation 'androidx.room:room-ktx:2.6.1'
     kapt 'androidx.room:room-compiler:2.6.1'
     
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+    
     // WorkManager
     implementation 'androidx.work:work-runtime-ktx:2.9.0'
     
     // Biometric
     implementation 'androidx.biometric:biometric:1.2.0-alpha05'
+    
+    // Security
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
     
     // Testing
     testImplementation 'junit:junit:4.13.2'

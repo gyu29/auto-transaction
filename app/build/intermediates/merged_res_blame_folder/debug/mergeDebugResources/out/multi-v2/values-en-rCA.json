@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.hanatransaction.app-mergeDebugResources-54:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.hanatransaction.app-mergeDebugResources-56:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/ba6337eff39342d2435859014c95ff87/transformed/biometric-1.2.0-alpha05/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/bcace5c95716b1dd179f979e36a7e6ed/transformed/biometric-1.2.0-alpha05/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/02013cccaa98f7eb62628ce23a8bdb67/transformed/appcompat-1.6.1/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/3c449713a25389ce8945468e1614c205/transformed/appcompat-1.6.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/806883af75e868fec66fa339d443b41d/transformed/core-1.12.0/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/05513115d184a8d928745d8015fea8b0/transformed/core-1.12.0/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

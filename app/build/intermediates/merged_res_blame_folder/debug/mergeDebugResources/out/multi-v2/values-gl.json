@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.hanatransaction.app-mergeDebugResources-54:/values-gl/values-gl.xml",
+            "outputFile": "com.hanatransaction.app-mergeDebugResources-56:/values-gl/values-gl.xml",
             "map": [
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/806883af75e868fec66fa339d443b41d/transformed/core-1.12.0/res/values-gl/values-gl.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/05513115d184a8d928745d8015fea8b0/transformed/core-1.12.0/res/values-gl/values-gl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,41 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/e7cd0d72acde0c420dd43fc9655beecb/transformed/navigation-ui-2.7.7/res/values-gl/values-gl.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,173",
-                        "endColumns": "117,121",
-                        "endOffsets": "168,290"
-                    },
-                    "to": {
-                        "startLines": "126,127",
-                        "startColumns": "4,4",
-                        "startOffsets": "11985,12103",
-                        "endColumns": "117,121",
-                        "endOffsets": "12098,12220"
-                    }
-                },
-                {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/ba6337eff39342d2435859014c95ff87/transformed/biometric-1.2.0-alpha05/res/values-gl/values-gl.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,226,357,467,574,736,840,961,1086,1232,1376,1515,1647,1790,1892,2061,2193,2340,2489,2611,2733,2842,2989,3089,3227,3334,3479",
-                        "endColumns": "170,130,109,106,161,103,120,124,145,143,138,131,142,101,168,131,146,148,121,121,108,146,99,137,106,144,108",
-                        "endOffsets": "221,352,462,569,731,835,956,1081,1227,1371,1510,1642,1785,1887,2056,2188,2335,2484,2606,2728,2837,2984,3084,3222,3329,3474,3583"
-                    },
-                    "to": {
-                        "startLines": "33,34,50,51,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,129,132,133,134,135,136,137,138",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3075,3246,4867,4977,5258,5420,5524,5645,5770,5916,6060,6199,6331,6474,6576,6745,6877,7024,7173,12310,12616,12725,12872,12972,13110,13217,13362",
-                        "endColumns": "170,130,109,106,161,103,120,124,145,143,138,131,142,101,168,131,146,148,121,121,108,146,99,137,106,144,108",
-                        "endOffsets": "3241,3372,4972,5079,5415,5519,5640,5765,5911,6055,6194,6326,6469,6571,6740,6872,7019,7168,7290,12427,12720,12867,12967,13105,13212,13357,13466"
-                    }
-                },
-                {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/02013cccaa98f7eb62628ce23a8bdb67/transformed/appcompat-1.6.1/res/values-gl/values-gl.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/3c449713a25389ce8945468e1614c205/transformed/appcompat-1.6.1/res/values-gl/values-gl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +38,41 @@
                     }
                 },
                 {
-                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/2c5ab8deb64657db9e0007cf697dd8ec/transformed/material-1.11.0/res/values-gl/values-gl.xml",
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/bcace5c95716b1dd179f979e36a7e6ed/transformed/biometric-1.2.0-alpha05/res/values-gl/values-gl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,226,357,467,574,736,840,961,1086,1232,1376,1515,1647,1790,1892,2061,2193,2340,2489,2611,2733,2842,2989,3089,3227,3334,3479",
+                        "endColumns": "170,130,109,106,161,103,120,124,145,143,138,131,142,101,168,131,146,148,121,121,108,146,99,137,106,144,108",
+                        "endOffsets": "221,352,462,569,731,835,956,1081,1227,1371,1510,1642,1785,1887,2056,2188,2335,2484,2606,2728,2837,2984,3084,3222,3329,3474,3583"
+                    },
+                    "to": {
+                        "startLines": "33,34,50,51,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,129,132,133,134,135,136,137,138",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3075,3246,4867,4977,5258,5420,5524,5645,5770,5916,6060,6199,6331,6474,6576,6745,6877,7024,7173,12310,12616,12725,12872,12972,13110,13217,13362",
+                        "endColumns": "170,130,109,106,161,103,120,124,145,143,138,131,142,101,168,131,146,148,121,121,108,146,99,137,106,144,108",
+                        "endOffsets": "3241,3372,4972,5079,5415,5519,5640,5765,5911,6055,6194,6326,6469,6571,6740,6872,7019,7168,7290,12427,12720,12867,12967,13105,13212,13357,13466"
+                    }
+                },
+                {
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/a205b607ad913bf3907879ff78082fd9/transformed/navigation-ui-2.7.7/res/values-gl/values-gl.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,173",
+                        "endColumns": "117,121",
+                        "endOffsets": "168,290"
+                    },
+                    "to": {
+                        "startLines": "126,127",
+                        "startColumns": "4,4",
+                        "startOffsets": "11985,12103",
+                        "endColumns": "117,121",
+                        "endOffsets": "12098,12220"
+                    }
+                },
+                {
+                    "source": "/Users/geney/.gradle/caches/8.11.1/transforms/e4460e1d0962166ca5dba9fc35b21cd0/transformed/material-1.11.0/res/values-gl/values-gl.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
