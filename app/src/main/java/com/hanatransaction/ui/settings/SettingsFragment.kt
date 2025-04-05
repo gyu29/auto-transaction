@@ -6,13 +6,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.hanatransaction.R
 import com.hanatransaction.databinding.FragmentSettingsBinding
+import com.hanatransaction.security.AuthManager
+import com.hanatransaction.security.BiometricHelper
+import com.hanatransaction.security.PinManager
+import com.hanatransaction.ui.theme.ThemeManager
 import kotlinx.coroutines.launch
 
 class SettingsFragment : Fragment() {
@@ -21,6 +28,10 @@ class SettingsFragment : Fragment() {
     private val binding get() = _binding!!
     
     private val viewModel: SettingsViewModel by viewModels()
+    private lateinit var authManager: AuthManager
+    private lateinit var pinManager: PinManager
+    private lateinit var biometricHelper: BiometricHelper
+    private lateinit var themeManager: ThemeManager
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,53 +45,62 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
+        // Initialize managers
+        authManager = AuthManager(requireContext())
+        pinManager = PinManager(requireContext())
+        biometricHelper = BiometricHelper(requireContext())
+        themeManager = ThemeManager(requireContext())
+        
         setupSwitches()
         setupButtons()
         observeViewModel()
     }
     
     private fun setupSwitches() {
-        // Bind switches to ViewModel
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.useBiometric.observe(viewLifecycleOwner) { useBiometric ->
-                binding.switchBiometric.isChecked = useBiometric
-            }
-            
-            viewModel.darkMode.observe(viewLifecycleOwner) { darkMode ->
-                binding.switchDarkMode.isChecked = darkMode
-            }
-            
-            viewModel.useSystemTheme.observe(viewLifecycleOwner) { useSystemTheme ->
-                binding.switchSystemTheme.isChecked = useSystemTheme
-            }
-            
-            viewModel.transactionAlerts.observe(viewLifecycleOwner) { transactionAlerts ->
-                binding.switchTransactionAlerts.isChecked = transactionAlerts
-            }
-            
-            viewModel.paymentReminders.observe(viewLifecycleOwner) { paymentReminders ->
-                binding.switchPaymentReminders.isChecked = paymentReminders
-            }
-            
-            viewModel.requirePin.observe(viewLifecycleOwner) { requirePin ->
-                binding.switchRequirePin.isChecked = requirePin
-            }
-        }
+        // Set initial switch states based on actual system settings
+        binding.switchBiometric.isChecked = viewModel.useBiometric.value ?: false
+        binding.switchDarkMode.isChecked = themeManager.isDarkModeEnabled()
+        binding.switchSystemTheme.isChecked = themeManager.isUsingSystemTheme()
+        binding.switchSystemTheme.isEnabled = !binding.switchDarkMode.isChecked
+        binding.switchTransactionAlerts.isChecked = viewModel.transactionAlerts.value ?: true
+        binding.switchPaymentReminders.isChecked = viewModel.paymentReminders.value ?: true
         
         // Set change listeners
         binding.switchBiometric.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setUseBiometric(isChecked)
-            saveSettings()
+            if (isChecked && !biometricHelper.isBiometricAvailable()) {
+                Snackbar.make(
+                    binding.root,
+                    R.string.biometric_not_available,
+                    Snackbar.LENGTH_LONG
+                ).show()
+                binding.switchBiometric.isChecked = false
+                viewModel.setUseBiometric(false)
+            } else {
+                viewModel.setUseBiometric(isChecked)
+                saveSettings()
+            }
         }
         
         binding.switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setDarkMode(isChecked)
+            themeManager.setDarkMode(isChecked)
             binding.switchSystemTheme.isEnabled = !isChecked
+            if (isChecked) {
+                binding.switchSystemTheme.isChecked = false
+                viewModel.setUseSystemTheme(false)
+                themeManager.setUseSystemTheme(false)
+            }
             saveSettings()
         }
         
         binding.switchSystemTheme.setOnCheckedChangeListener { _, isChecked ->
             viewModel.setUseSystemTheme(isChecked)
+            themeManager.setUseSystemTheme(isChecked)
+            if (isChecked) {
+                binding.switchDarkMode.isChecked = false
+                viewModel.setDarkMode(false)
+                themeManager.setDarkMode(false)
+            }
             saveSettings()
         }
         
@@ -93,18 +113,9 @@ class SettingsFragment : Fragment() {
             viewModel.setPaymentReminders(isChecked)
             saveSettings()
         }
-        
-        binding.switchRequirePin.setOnCheckedChangeListener { _, isChecked ->
-            viewModel.setRequirePin(isChecked)
-            saveSettings()
-        }
     }
     
     private fun setupButtons() {
-        binding.buttonChangePassword.setOnClickListener {
-            showChangePasswordDialog()
-        }
-        
         binding.buttonLogout.setOnClickListener {
             showLogoutConfirmationDialog()
         }
@@ -114,59 +125,72 @@ class SettingsFragment : Fragment() {
         }
         
         binding.buttonPrivacyPolicy.setOnClickListener {
-            openWebPage("https://hanatransaction.com/privacy")
+            findNavController().navigate(R.id.action_settingsFragment_to_privacyPolicyFragment)
         }
         
         binding.buttonTermsOfService.setOnClickListener {
-            openWebPage("https://hanatransaction.com/terms")
+            findNavController().navigate(R.id.action_settingsFragment_to_termsOfServiceFragment)
         }
     }
     
-    private fun showChangePasswordDialog() {
-        // In a real app, implement a proper password change dialog
-        MaterialAlertDialogBuilder(requireContext())
-            .setTitle(R.string.settings_change_password)
-            .setMessage("This functionality would be implemented with a proper password change form.")
-            .setPositiveButton(android.R.string.ok, null)
-            .show()
-    }
-    
     private fun showChangePinDialog() {
-        // In a real app, implement a proper PIN change dialog
+        val view = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_change_pin, null)
+        val currentPin = view.findViewById<EditText>(R.id.editTextCurrentPin)
+        val newPin = view.findViewById<EditText>(R.id.editTextNewPin)
+        val confirmPin = view.findViewById<EditText>(R.id.editTextConfirmPin)
+        
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.settings_change_pin)
-            .setMessage("This functionality would be implemented with a proper PIN entry form.")
-            .setPositiveButton(android.R.string.ok, null)
+            .setView(view)
+            .setPositiveButton(R.string.save) { _, _ ->
+                val currentPinText = currentPin.text.toString()
+                val newPinText = newPin.text.toString()
+                val confirmPinText = confirmPin.text.toString()
+                
+                if (newPinText != confirmPinText) {
+                    Snackbar.make(
+                        binding.root,
+                        R.string.pin_not_match,
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                    return@setPositiveButton
+                }
+                
+                if (pinManager.changePin(currentPinText, newPinText)) {
+                    Snackbar.make(
+                        binding.root,
+                        R.string.pin_changed,
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                } else {
+                    Snackbar.make(
+                        binding.root,
+                        R.string.pin_wrong,
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
+            }
+            .setNegativeButton(R.string.cancel, null)
             .show()
     }
     
     private fun showLogoutConfirmationDialog() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.settings_logout)
-            .setMessage("Are you sure you want to log out?")
+            .setMessage(R.string.logout_confirm)
             .setPositiveButton(R.string.yes) { _, _ ->
-                // In a real app, implement actual logout functionality
+                // Perform actual logout
+                authManager.logout()
+                
+                // Snackbar will not be seen as we're navigating away
                 Snackbar.make(
                     binding.root,
-                    "Logout functionality would be implemented here",
-                    Snackbar.LENGTH_LONG
+                    R.string.logout_successful,
+                    Snackbar.LENGTH_SHORT
                 ).show()
             }
             .setNegativeButton(R.string.no, null)
             .show()
-    }
-    
-    private fun openWebPage(url: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-        if (intent.resolveActivity(requireActivity().packageManager) != null) {
-            startActivity(intent)
-        } else {
-            Snackbar.make(
-                binding.root,
-                "No browser available to open the URL",
-                Snackbar.LENGTH_LONG
-            ).show()
-        }
     }
     
     private fun saveSettings() {

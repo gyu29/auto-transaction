@@ -237,4 +237,24 @@
         <p>If you have any questions about these Terms, please contact us at terms@hanatransaction.com</p>
         ]]>
     </string>
+    
+    <!-- Setup Flow -->
+    <string name="setup_credentials_title">Connect Your Hana Bank Account</string>
+    <string name="setup_credentials_subtitle">Enter your Hana Bank credentials to access your account</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="next">Next</string>
+    <string name="error_fields_required">All fields are required</string>
+    
+    <string name="setup_pin_subtitle">Create a 4-digit PIN to secure your app</string>
+    
+    <string name="setup_biometric_title">Set Up Biometric Authentication</string>
+    <string name="setup_biometric_subtitle">Use your fingerprint or face for quicker login</string>
+    <string name="enable_biometric">Enable Biometric Authentication</string>
+    <string name="skip">Skip</string>
+    <string name="continue_setup">Continue</string>
+    
+    <string name="setup_complete_title">Setup Complete!</string>
+    <string name="setup_complete_subtitle">Your account is ready to use</string>
+    <string name="start_using_app">Start Using App</string>
 </resources> 

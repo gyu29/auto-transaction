@@ -69,15 +69,6 @@
                             android:textColor="@color/black" />
 
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/buttonChangePassword"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="start|center_vertical"
-                            android:text="@string/settings_change_password"
-                            android:textColor="@color/hana_primary" />
-
-                        <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonLogout"
                             style="@style/Widget.MaterialComponents.Button.TextButton"
                             android:layout_width="match_parent"
@@ -199,19 +190,12 @@
                             android:textAppearance="@style/TextAppearance.HanaTransaction.Subtitle1"
                             android:textColor="@color/black" />
 
-                        <com.google.android.material.switchmaterial.SwitchMaterial
-                            android:id="@+id/switchRequirePin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:text="@string/settings_require_pin"
-                            android:textColor="@color/black" />
-
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonChangePin"
                             style="@style/Widget.MaterialComponents.Button.TextButton"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
                             android:gravity="start|center_vertical"
                             android:text="@string/settings_change_pin"
                             android:textColor="@color/hana_primary" />

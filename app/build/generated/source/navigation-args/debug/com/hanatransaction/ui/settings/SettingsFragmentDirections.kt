@@ -1,6 +1,7 @@
 package com.hanatransaction.ui.settings
 
 import android.os.Bundle
+import androidx.navigation.ActionOnlyNavDirections
 import androidx.navigation.NavDirections
 import com.hanatransaction.R
 import kotlin.Int
@@ -22,5 +23,11 @@ public class SettingsFragmentDirections private constructor() {
   public companion object {
     public fun actionSettingsFragmentToPinFragment(mode: Int = 2): NavDirections =
         ActionSettingsFragmentToPinFragment(mode)
+
+    public fun actionSettingsFragmentToPrivacyPolicyFragment(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_settingsFragment_to_privacyPolicyFragment)
+
+    public fun actionSettingsFragmentToTermsOfServiceFragment(): NavDirections =
+        ActionOnlyNavDirections(R.id.action_settingsFragment_to_termsOfServiceFragment)
   }
 }

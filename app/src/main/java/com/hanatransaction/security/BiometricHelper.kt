@@ -2,6 +2,8 @@ package com.hanatransaction.security
 
 import android.content.Context
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
@@ -15,7 +17,8 @@ import java.util.concurrent.Executor
 class BiometricHelper(private val context: Context) {
 
     private lateinit var executor: Executor
-    private lateinit var biometricPrompt: BiometricPrompt
+    private var biometricPrompt: BiometricPrompt? = null
+    private var isAuthenticating = false
 
     /**
      * Check if biometric authentication is available on the device
@@ -47,6 +50,12 @@ class BiometricHelper(private val context: Context) {
         onError: (errorCode: Int, errString: CharSequence) -> Unit = { _, _ -> },
         onFailed: () -> Unit = {}
     ) {
+        // Prevent multiple authentication attempts
+        if (isAuthenticating) {
+            return
+        }
+        
+        isAuthenticating = true
         executor = ContextCompat.getMainExecutor(context)
         
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
@@ -57,24 +66,42 @@ class BiometricHelper(private val context: Context) {
             .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG)
             .build()
 
+        // Cancel any existing prompt before creating a new one
+        biometricPrompt?.cancelAuthentication()
+        
         biometricPrompt = BiometricPrompt(activity, executor,
             object : BiometricPrompt.AuthenticationCallback() {
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
-                    onSuccess()
+                    isAuthenticating = false
+                    
+                    // Add a small delay to ensure UI is updated properly
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        onSuccess()
+                    }, 300)
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                     super.onAuthenticationError(errorCode, errString)
+                    isAuthenticating = false
                     onError(errorCode, errString)
                 }
 
                 override fun onAuthenticationFailed() {
                     super.onAuthenticationFailed()
+                    isAuthenticating = false
                     onFailed()
                 }
             })
 
-        biometricPrompt.authenticate(promptInfo)
+        biometricPrompt?.authenticate(promptInfo)
+    }
+    
+    /**
+     * Cancel ongoing authentication if any
+     */
+    fun cancelAuthentication() {
+        biometricPrompt?.cancelAuthentication()
+        isAuthenticating = false
     }
 } 

@@ -149,8 +149,8 @@ class AuthManager(private val context: Context) {
             .remove(KEY_SESSION_EXPIRY)
             .apply()
         
-        // Restart the app to go to the login screen
-        val intent = Intent(context, LoginActivity::class.java).apply {
+        // Start the main activity with flags to clear the stack and start fresh
+        val intent = Intent(context, com.hanatransaction.ui.MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         context.startActivity(intent)

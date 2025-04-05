@@ -8,6 +8,10 @@
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_settings.xml"
     },
     {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_dialog_change_password.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/dialog_change_password.xml"
+    },
+    {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_pin.xml.flat",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_pin.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/navigation_nav_graph.xml.flat",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.hanatransaction.app-debug-58:/layout_activity_setup.xml.flat",
+        "source": "com.hanatransaction.app-main-60:/layout/activity_setup.xml"
     },
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/drawable_ic_arrow_back.xml.flat",
@@ -44,16 +52,24 @@
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_new_transaction.xml"
     },
     {
+        "merged": "com.hanatransaction.app-debug-58:/drawable_pin_dot.xml.flat",
+        "source": "com.hanatransaction.app-main-60:/drawable/pin_dot.xml"
+    },
+    {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_fragment_legal_document.xml.flat",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_legal_document.xml"
     },
     {
-        "merged": "com.hanatransaction.app-debug-58:/layout_activity_login.xml.flat",
-        "source": "com.hanatransaction.app-main-60:/layout/activity_login.xml"
+        "merged": "com.hanatransaction.app-debug-58:/drawable_step_indicator.xml.flat",
+        "source": "com.hanatransaction.app-main-60:/drawable/step_indicator.xml"
     },
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_activity_login.xml.flat",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/layout_dialog_change_pin.xml.flat",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/dialog_change_pin.xml"
     },
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-debug-58:/menu_bottom_nav_menu.xml.flat",

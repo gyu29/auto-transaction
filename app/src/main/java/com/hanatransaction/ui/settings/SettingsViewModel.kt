@@ -6,9 +6,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hanatransaction.HanaTransactionApp
+import com.hanatransaction.data.repository.UserRepository
 import kotlinx.coroutines.launch
 
 class SettingsViewModel : ViewModel() {
+    
+    // User Repository
+    private val userRepository: UserRepository = HanaTransactionApp.instance.userRepository
     
     // Shared Preferences
     private val sharedPreferences: SharedPreferences = HanaTransactionApp.instance.getSharedPreferences(
@@ -32,9 +36,6 @@ class SettingsViewModel : ViewModel() {
     private val _paymentReminders = MutableLiveData<Boolean>()
     val paymentReminders: LiveData<Boolean> = _paymentReminders
     
-    private val _requirePin = MutableLiveData<Boolean>()
-    val requirePin: LiveData<Boolean> = _requirePin
-    
     // UI State
     private val _settingsSaved = MutableLiveData<Boolean>()
     val settingsSaved: LiveData<Boolean> = _settingsSaved
@@ -49,7 +50,6 @@ class SettingsViewModel : ViewModel() {
         _useSystemTheme.value = sharedPreferences.getBoolean(KEY_USE_SYSTEM_THEME, true)
         _transactionAlerts.value = sharedPreferences.getBoolean(KEY_TRANSACTION_ALERTS, true)
         _paymentReminders.value = sharedPreferences.getBoolean(KEY_PAYMENT_REMINDERS, true)
-        _requirePin.value = sharedPreferences.getBoolean(KEY_REQUIRE_PIN, false)
     }
     
     fun saveSettings() {
@@ -60,8 +60,17 @@ class SettingsViewModel : ViewModel() {
                 putBoolean(KEY_USE_SYSTEM_THEME, _useSystemTheme.value ?: true)
                 putBoolean(KEY_TRANSACTION_ALERTS, _transactionAlerts.value ?: true)
                 putBoolean(KEY_PAYMENT_REMINDERS, _paymentReminders.value ?: true)
-                putBoolean(KEY_REQUIRE_PIN, _requirePin.value ?: false)
                 apply()
+            }
+            
+            // Also update the user record in the database
+            try {
+                val currentUser = userRepository.getCurrentUserSync()
+                if (currentUser != null) {
+                    userRepository.updateBiometricSetting(currentUser.id, _useBiometric.value ?: false)
+                }
+            } catch (e: Exception) {
+                // Handle error
             }
             
             _settingsSaved.value = true
@@ -92,16 +101,11 @@ class SettingsViewModel : ViewModel() {
         _paymentReminders.value = value
     }
     
-    fun setRequirePin(value: Boolean) {
-        _requirePin.value = value
-    }
-    
     companion object {
         private const val KEY_USE_BIOMETRIC = "use_biometric"
         private const val KEY_DARK_MODE = "dark_mode"
         private const val KEY_USE_SYSTEM_THEME = "use_system_theme"
         private const val KEY_TRANSACTION_ALERTS = "transaction_alerts"
         private const val KEY_PAYMENT_REMINDERS = "payment_reminders"
-        private const val KEY_REQUIRE_PIN = "require_pin"
     }
 } 

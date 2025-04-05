@@ -1,5 +1,6 @@
 package com.hanatransaction.ui.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -24,9 +25,15 @@ abstract class AuthenticatedFragment : Fragment() {
     
     protected suspend fun requireAuthentication(): Boolean {
         return try {
-            // Check if biometric auth is enabled for the user
-            val user = userRepository.getCurrentUserSync()
-            if (user?.useBiometricAuth != true) {
+            // Check if biometric auth is enabled for the user in shared preferences
+            val sharedPreferences = requireContext().getSharedPreferences(
+                "hana_transaction_prefs", 
+                Context.MODE_PRIVATE
+            )
+            val biometricEnabled = sharedPreferences.getBoolean("use_biometric", false)
+            
+            // If biometric is disabled in settings, no need to authenticate
+            if (!biometricEnabled) {
                 return true
             }
             

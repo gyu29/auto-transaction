@@ -37,20 +37,24 @@
         android:theme="@style/Theme.HanaTransaction" >
         <activity
             android:name="com.hanatransaction.ui.auth.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.hanatransaction.ui.auth.SetupActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.hanatransaction.ui.MainActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="true"
-            android:launchMode="singleTask"
-            android:taskAffinity="" >
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.hanatransaction.ui.MainActivity"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:taskAffinity="" >
         </activity>
 
         <provider

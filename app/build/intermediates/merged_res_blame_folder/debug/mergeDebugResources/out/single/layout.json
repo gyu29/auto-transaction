@@ -1,5 +1,17 @@
 [
     {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_transactions.xml",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_transactions.xml"
+    },
+    {
+        "merged": "com.hanatransaction.app-mergeDebugResources-57:/layout/activity_setup.xml",
+        "source": "com.hanatransaction.app-main-60:/layout/activity_setup.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_settings.xml",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_settings.xml"
+    },
+    {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/activity_main.xml",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/activity_main.xml"
     },
@@ -8,20 +20,12 @@
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_legal_document.xml"
     },
     {
-        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_transactions.xml",
-        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_transactions.xml"
-    },
-    {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_transaction_detail.xml",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_transaction_detail.xml"
     },
     {
-        "merged": "com.hanatransaction.app-mergeDebugResources-57:/layout/activity_login.xml",
-        "source": "com.hanatransaction.app-main-60:/layout/activity_login.xml"
-    },
-    {
-        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_settings.xml",
-        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_settings.xml"
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/dialog_change_pin.xml",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/dialog_change_pin.xml"
     },
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_home.xml",
@@ -38,6 +42,10 @@
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/fragment_pin.xml",
         "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/fragment_pin.xml"
+    },
+    {
+        "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/dialog_change_password.xml",
+        "source": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-main-60:/layout/dialog_change_password.xml"
     },
     {
         "merged": "/Users/geney/.gradle/daemon/8.11.1/com.hanatransaction.app-mergeDebugResources-57:/layout/item_transaction.xml",

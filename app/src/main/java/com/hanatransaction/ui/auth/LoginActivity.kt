@@ -1,5 +1,6 @@
 package com.hanatransaction.ui.auth
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -11,7 +12,6 @@ import com.hanatransaction.databinding.ActivityLoginBinding
 import com.hanatransaction.security.AuthManager
 import com.hanatransaction.security.BiometricHelper
 import com.hanatransaction.security.PinManager
-import com.hanatransaction.ui.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -21,9 +21,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var biometricHelper: BiometricHelper
     
     private var pin = ""
-    private var isPinCreation = false
-    private var isPinConfirmation = false
-    private var confirmPin = ""
+    private var authenticationAttempts = 0
     
     // View references
     private lateinit var textViewTitle: TextView
@@ -54,31 +52,45 @@ class LoginActivity : AppCompatActivity() {
             binding.pinDot4
         )
         
-        // Check if PIN is set - if not, prompt for creation
-        isPinCreation = !pinManager.isPinSet()
-        if (isPinCreation) {
-            textViewTitle.text = getString(R.string.pin_setup)
-        } else {
-            textViewTitle.text = getString(R.string.pin_enter)
+        // Check if PIN is set - if not, start SetupActivity for new users
+        if (!pinManager.isPinSet()) {
+            startSetupActivity()
+            return
         }
         
-        // Set up biometric button visibility
-        buttonBiometric.visibility = if (!isPinCreation && biometricHelper.isBiometricAvailable()) 
+        // User already has a PIN, proceed with PIN verification
+        textViewTitle.text = getString(R.string.pin_enter)
+        
+        // Get the biometric setting from shared preferences
+        val sharedPreferences = getSharedPreferences("hana_transaction_prefs", android.content.Context.MODE_PRIVATE)
+        val biometricEnabled = sharedPreferences.getBoolean("use_biometric", false)
+        
+        // Set up biometric button visibility based on both device capability and user preference
+        buttonBiometric.visibility = if (biometricEnabled && biometricHelper.isBiometricAvailable()) 
                                       View.VISIBLE else View.GONE
         
         // Set up biometric button
         buttonBiometric.setOnClickListener {
+            // Prevent multiple rapid attempts
+            if (authenticationAttempts > 0) return@setOnClickListener
+            
+            authenticationAttempts++
+            
             biometricHelper.authenticate(
                 this,
                 onSuccess = {
                     authManager.login()
-                    startMainActivity()
+                    authenticationSuccessful()
                 },
-                onError = { _, errString ->
+                onError = { errorCode, errString ->
+                    // Reset counter on error
+                    authenticationAttempts = 0
                     textViewError.text = getString(R.string.biometric_error, errString)
                     textViewError.visibility = View.VISIBLE
                 },
                 onFailed = {
+                    // Reset counter on failure
+                    authenticationAttempts = 0
                     textViewError.text = getString(R.string.biometric_failed)
                     textViewError.visibility = View.VISIBLE
                 }
@@ -87,6 +99,35 @@ class LoginActivity : AppCompatActivity() {
         
         // Set up number pad
         setupKeypad()
+    }
+    
+    /**
+     * Start the SetupActivity for new users
+     */
+    private fun startSetupActivity() {
+        val intent = Intent(this, SetupActivity::class.java)
+        startActivityForResult(intent, SETUP_REQUEST_CODE)
+    }
+    
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        
+        if (requestCode == SETUP_REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                // Setup completed successfully
+                authenticationSuccessful()
+            } else {
+                // Setup canceled or failed
+                setResult(Activity.RESULT_CANCELED)
+                finish()
+            }
+        }
+    }
+    
+    override fun onBackPressed() {
+        // User cancelled login - set result and finish
+        setResult(Activity.RESULT_CANCELED)
+        finish()
     }
     
     private fun setupKeypad() {
@@ -122,74 +163,16 @@ class LoginActivity : AppCompatActivity() {
     }
     
     private fun handleDelete() {
-        if (isPinCreation && isPinConfirmation && confirmPin.isNotEmpty()) {
-            confirmPin = confirmPin.dropLast(1)
-        } else if (pin.isNotEmpty()) {
+        if (pin.isNotEmpty()) {
             pin = pin.dropLast(1)
+            updatePinDots()
         }
-        updatePinDots()
     }
     
     private fun onDigitPressed(digit: String) {
         // Hide any error message
         textViewError.visibility = View.INVISIBLE
         
-        if (isPinCreation) {
-            handlePinCreation(digit)
-        } else {
-            handlePinVerification(digit)
-        }
-    }
-    
-    private fun handlePinCreation(digit: String) {
-        if (!isPinConfirmation) {
-            // First PIN entry
-            if (pin.length < 4) {
-                pin += digit
-                updatePinDots()
-                
-                if (pin.length == 4) {
-                    // Move to confirmation
-                    isPinConfirmation = true
-                    textViewTitle.text = getString(R.string.pin_confirm)
-                }
-            }
-        } else {
-            // PIN confirmation entry
-            if (confirmPin.length < 4) {
-                confirmPin += digit
-                updatePinDots()
-                
-                if (confirmPin.length == 4) {
-                    // Check if PINs match
-                    if (pin == confirmPin) {
-                        // Save PIN and proceed
-                        pinManager.createPin(pin)
-                        authManager.login()
-                        
-                        // Show success message and proceed
-                        textViewError.text = getString(R.string.pin_created)
-                        textViewError.visibility = View.VISIBLE
-                        
-                        // Proceed to app after a short delay
-                        binding.root.postDelayed({
-                            startMainActivity()
-                        }, 1000)
-                    } else {
-                        // Show error message
-                        textViewError.text = getString(R.string.pin_not_match)
-                        textViewError.visibility = View.VISIBLE
-                        
-                        // Reset confirmation
-                        confirmPin = ""
-                        updatePinDots()
-                    }
-                }
-            }
-        }
-    }
-    
-    private fun handlePinVerification(digit: String) {
         if (pin.length < 4) {
             pin += digit
             updatePinDots()
@@ -198,7 +181,7 @@ class LoginActivity : AppCompatActivity() {
                 // Verify PIN
                 if (pinManager.verifyPin(pin)) {
                     authManager.login()
-                    startMainActivity()
+                    authenticationSuccessful()
                 } else {
                     // Show error message
                     textViewError.text = getString(R.string.pin_wrong)
@@ -213,16 +196,18 @@ class LoginActivity : AppCompatActivity() {
     }
     
     private fun updatePinDots() {
-        val currentPin = if (isPinCreation && isPinConfirmation) confirmPin else pin
-        
         for (i in pinDots.indices) {
-            pinDots[i].isEnabled = i < currentPin.length
+            pinDots[i].isEnabled = i < pin.length
         }
     }
     
-    private fun startMainActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+    private fun authenticationSuccessful() {
+        // Set result and finish
+        setResult(Activity.RESULT_OK)
         finish()
+    }
+    
+    companion object {
+        private const val SETUP_REQUEST_CODE = 1002
     }
 } 

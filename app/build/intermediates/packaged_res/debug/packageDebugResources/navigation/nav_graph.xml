@@ -51,6 +51,12 @@
                 app:argType="integer"
                 android:defaultValue="2" />
         </action>
+        <action
+            android:id="@+id/action_settingsFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_termsOfServiceFragment"
+            app:destination="@id/termsOfServiceFragment" />
     </fragment>
 
     <fragment
@@ -86,5 +92,17 @@
             app:argType="integer"
             android:defaultValue="1" />
     </fragment>
+
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.hanatransaction.ui.legal.PrivacyPolicyFragment"
+        android:label="@string/privacy_policy_title"
+        tools:layout="@layout/fragment_legal_document" />
+
+    <fragment
+        android:id="@+id/termsOfServiceFragment"
+        android:name="com.hanatransaction.ui.legal.TermsOfServiceFragment"
+        android:label="@string/terms_of_service_title"
+        tools:layout="@layout/fragment_legal_document" />
 
 </navigation> 

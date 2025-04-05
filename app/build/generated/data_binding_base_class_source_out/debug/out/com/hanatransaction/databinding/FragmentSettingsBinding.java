@@ -22,9 +22,6 @@ public final class FragmentSettingsBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final MaterialButton buttonChangePassword;
-
-  @NonNull
   public final MaterialButton buttonChangePin;
 
   @NonNull
@@ -46,9 +43,6 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final SwitchMaterial switchPaymentReminders;
 
   @NonNull
-  public final SwitchMaterial switchRequirePin;
-
-  @NonNull
   public final SwitchMaterial switchSystemTheme;
 
   @NonNull
@@ -58,14 +52,12 @@ public final class FragmentSettingsBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   private FragmentSettingsBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull MaterialButton buttonChangePassword, @NonNull MaterialButton buttonChangePin,
-      @NonNull MaterialButton buttonLogout, @NonNull MaterialButton buttonPrivacyPolicy,
-      @NonNull MaterialButton buttonTermsOfService, @NonNull SwitchMaterial switchBiometric,
-      @NonNull SwitchMaterial switchDarkMode, @NonNull SwitchMaterial switchPaymentReminders,
-      @NonNull SwitchMaterial switchRequirePin, @NonNull SwitchMaterial switchSystemTheme,
+      @NonNull MaterialButton buttonChangePin, @NonNull MaterialButton buttonLogout,
+      @NonNull MaterialButton buttonPrivacyPolicy, @NonNull MaterialButton buttonTermsOfService,
+      @NonNull SwitchMaterial switchBiometric, @NonNull SwitchMaterial switchDarkMode,
+      @NonNull SwitchMaterial switchPaymentReminders, @NonNull SwitchMaterial switchSystemTheme,
       @NonNull SwitchMaterial switchTransactionAlerts, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
-    this.buttonChangePassword = buttonChangePassword;
     this.buttonChangePin = buttonChangePin;
     this.buttonLogout = buttonLogout;
     this.buttonPrivacyPolicy = buttonPrivacyPolicy;
@@ -73,7 +65,6 @@ public final class FragmentSettingsBinding implements ViewBinding {
     this.switchBiometric = switchBiometric;
     this.switchDarkMode = switchDarkMode;
     this.switchPaymentReminders = switchPaymentReminders;
-    this.switchRequirePin = switchRequirePin;
     this.switchSystemTheme = switchSystemTheme;
     this.switchTransactionAlerts = switchTransactionAlerts;
     this.toolbar = toolbar;
@@ -106,12 +97,6 @@ public final class FragmentSettingsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.buttonChangePassword;
-      MaterialButton buttonChangePassword = ViewBindings.findChildViewById(rootView, id);
-      if (buttonChangePassword == null) {
-        break missingId;
-      }
-
       id = R.id.buttonChangePin;
       MaterialButton buttonChangePin = ViewBindings.findChildViewById(rootView, id);
       if (buttonChangePin == null) {
@@ -154,12 +139,6 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.switchRequirePin;
-      SwitchMaterial switchRequirePin = ViewBindings.findChildViewById(rootView, id);
-      if (switchRequirePin == null) {
-        break missingId;
-      }
-
       id = R.id.switchSystemTheme;
       SwitchMaterial switchSystemTheme = ViewBindings.findChildViewById(rootView, id);
       if (switchSystemTheme == null) {
@@ -178,10 +157,9 @@ public final class FragmentSettingsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSettingsBinding((CoordinatorLayout) rootView, buttonChangePassword,
-          buttonChangePin, buttonLogout, buttonPrivacyPolicy, buttonTermsOfService, switchBiometric,
-          switchDarkMode, switchPaymentReminders, switchRequirePin, switchSystemTheme,
-          switchTransactionAlerts, toolbar);
+      return new FragmentSettingsBinding((CoordinatorLayout) rootView, buttonChangePin,
+          buttonLogout, buttonPrivacyPolicy, buttonTermsOfService, switchBiometric, switchDarkMode,
+          switchPaymentReminders, switchSystemTheme, switchTransactionAlerts, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
