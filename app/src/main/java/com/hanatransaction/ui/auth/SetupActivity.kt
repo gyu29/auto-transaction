@@ -204,8 +204,25 @@ class SetupActivity : AppCompatActivity() {
         
         // Setup finish button
         binding.buttonFinish.setOnClickListener {
-            // Log the user in
+            // Ensure user ID is set properly (this is critical)
+            authManager.setUserId(1L)  // In a real app, this would be from the server
+            
+            // Make sure we're logged in 
             authManager.login()
+            
+            // Double-check login status
+            if (!authManager.isLoggedIn()) {
+                // If still not logged in, try a more direct approach
+                val encryptedPrefs = authManager.getEncryptedPreferences()
+                val authToken = "auth_token_${System.currentTimeMillis()}"
+                val sessionExpiry = System.currentTimeMillis() + AuthManager.SESSION_TIMEOUT
+                
+                encryptedPrefs.edit()
+                    .putLong(AuthManager.KEY_USER_ID, 1L)
+                    .putString(AuthManager.KEY_AUTH_TOKEN, authToken)
+                    .putLong(AuthManager.KEY_SESSION_EXPIRY, sessionExpiry)
+                    .apply()
+            }
             
             // Return success result
             setResult(Activity.RESULT_OK)

@@ -150,6 +150,9 @@ public final class ActivitySetupBinding implements ViewBinding {
   public final TextView textViewSubtitle;
 
   @NonNull
+  public final TextView textViewSuccessMessage;
+
+  @NonNull
   public final TextView textViewTitle;
 
   private ActivitySetupBinding(@NonNull ConstraintLayout rootView,
@@ -172,7 +175,7 @@ public final class ActivitySetupBinding implements ViewBinding {
       @NonNull View stepIndicator3, @NonNull View stepIndicator4,
       @NonNull LinearLayout stepIndicatorLayout, @NonNull TextView textViewBiometricNotAvailable,
       @NonNull TextView textViewError, @NonNull TextView textViewSubtitle,
-      @NonNull TextView textViewTitle) {
+      @NonNull TextView textViewSuccessMessage, @NonNull TextView textViewTitle) {
     this.rootView = rootView;
     this.buttonCancel = buttonCancel;
     this.buttonDelete = buttonDelete;
@@ -215,6 +218,7 @@ public final class ActivitySetupBinding implements ViewBinding {
     this.textViewBiometricNotAvailable = textViewBiometricNotAvailable;
     this.textViewError = textViewError;
     this.textViewSubtitle = textViewSubtitle;
+    this.textViewSuccessMessage = textViewSuccessMessage;
     this.textViewTitle = textViewTitle;
   }
 
@@ -491,6 +495,12 @@ public final class ActivitySetupBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textViewSuccessMessage;
+      TextView textViewSuccessMessage = ViewBindings.findChildViewById(rootView, id);
+      if (textViewSuccessMessage == null) {
+        break missingId;
+      }
+
       id = R.id.textViewTitle;
       TextView textViewTitle = ViewBindings.findChildViewById(rootView, id);
       if (textViewTitle == null) {
@@ -505,7 +515,7 @@ public final class ActivitySetupBinding implements ViewBinding {
           layoutCredentials, layoutPin, numberPad, pinDot1, pinDot2, pinDot3, pinDot4,
           pinDotsLayout, progressBar, stepIndicator1, stepIndicator2, stepIndicator3,
           stepIndicator4, stepIndicatorLayout, textViewBiometricNotAvailable, textViewError,
-          textViewSubtitle, textViewTitle);
+          textViewSubtitle, textViewSuccessMessage, textViewTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

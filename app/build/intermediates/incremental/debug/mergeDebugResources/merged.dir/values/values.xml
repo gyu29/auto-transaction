@@ -6934,6 +6934,10 @@
     <style name="ThemeOverlay.AppCompat.Dialog.Alert" parent="Base.ThemeOverlay.AppCompat.Dialog.Alert"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
     <style name="ThemeOverlay.Design.TextInputEditText" parent=""/>
+    <style name="ThemeOverlay.HanaTransaction.TextInputLayout" parent="">
+        <item name="colorPrimary">@color/hana_primary</item>
+        <item name="colorOnSurface">@color/medium_gray</item>
+    </style>
     <style name="ThemeOverlay.Material3" parent="ThemeOverlay.MaterialComponents"/>
     <style name="ThemeOverlay.Material3.ActionBar" parent="ThemeOverlay.MaterialComponents.ActionBar"/>
     <style name="ThemeOverlay.Material3.AutoCompleteTextView" parent="Base.ThemeOverlay.Material3.AutoCompleteTextView">
@@ -7718,13 +7722,30 @@
         <item name="android:textColorHint">@color/dark_gray</item>
     </style>
     <style name="Widget.HanaTransaction.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/hana_primary</item>
+        <item name="boxStrokeColor">@color/dark_gray</item>
         <item name="boxStrokeWidth">1dp</item>
         <item name="android:textColorHint">@color/dark_gray</item>
         <item name="hintTextColor">@color/dark_gray</item>
         <item name="android:textColor">@color/black</item>
         <item name="boxBackgroundColor">@color/light_gray</item>
         <item name="boxStrokeWidthFocused">2dp</item>
+    </style>
+    <style name="Widget.HanaTransaction.TextInputLayout.Setup" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="hintTextColor">@color/dark_gray</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeErrorColor">@color/toss_error</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.HanaTransaction.TextInputLayout</item>
+    </style>
+    <style name="Widget.HanaTransaction.TextInputLayout.Visible" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/light_gray</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="hintTextColor">@color/dark_gray</item>
+        <item name="boxStrokeColor">@color/medium_gray</item>
+        <item name="boxStrokeWidth">1dp</item>
     </style>
     <style name="Widget.Material3.ActionBar.Solid" parent="Base.Widget.Material3.ActionBar.Solid"/>
     <style name="Widget.Material3.ActionMode" parent="Base.Widget.Material3.ActionMode"/>

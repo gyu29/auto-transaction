@@ -10,9 +10,11 @@ color hana_secondary
 color ic_launcher_background
 color light_gray
 color medium_gray
+color mtrl_outlined_stroke_color
 color status_completed
 color status_failed
 color status_pending
+color text_input_box_stroke
 color toss_background
 color toss_blue
 color toss_card
@@ -29,6 +31,7 @@ drawable ic_launcher_foreground
 drawable ic_notification
 drawable pin_dot
 drawable step_indicator
+drawable text_input_background
 id action_homeFragment_to_newTransactionFragment
 id action_homeFragment_to_transactionDetailFragment
 id action_newTransactionFragment_to_homeFragment
@@ -135,6 +138,7 @@ id textViewPaymentMethod
 id textViewRecipientName
 id textViewStatus
 id textViewSubtitle
+id textViewSuccessMessage
 id textViewTitle
 id toolbar
 id transactionDetailFragment
@@ -297,6 +301,7 @@ style TextAppearance.HanaTransaction.Caption
 style TextAppearance.HanaTransaction.Headline1
 style TextAppearance.HanaTransaction.Headline2
 style TextAppearance.HanaTransaction.Subtitle1
+style ThemeOverlay.HanaTransaction.TextInputLayout
 style Theme.HanaTransaction
 style Theme.HanaTransaction.FullScreenDialog
 style Widget.HanaTransaction.Button
@@ -304,3 +309,5 @@ style Widget.HanaTransaction.Button.TextButton
 style Widget.HanaTransaction.CardView
 style Widget.HanaTransaction.TextInputEditText
 style Widget.HanaTransaction.TextInputLayout
+style Widget.HanaTransaction.TextInputLayout.Setup
+style Widget.HanaTransaction.TextInputLayout.Visible

@@ -24,4 +24,4 @@ class HanaTransactionApp : Application(), Configuration.Provider {
         lateinit var instance: HanaTransactionApp
             private set
     }
-} 
+}

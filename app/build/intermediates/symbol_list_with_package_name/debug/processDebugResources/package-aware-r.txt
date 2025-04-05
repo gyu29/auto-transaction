@@ -2159,6 +2159,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text_input_box_stroke
 color tooltip_background_dark
 color tooltip_background_light
 color toss_background
@@ -3162,6 +3163,7 @@ drawable notify_panel_notification_icon_bg
 drawable pin_dot
 drawable step_indicator
 drawable test_level_drawable
+drawable text_input_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -3730,6 +3732,7 @@ id textViewPaymentMethod
 id textViewRecipientName
 id textViewStatus
 id textViewSubtitle
+id textViewSuccessMessage
 id textViewTitle
 id text_input_end_icon
 id text_input_error_icon
@@ -4969,6 +4972,7 @@ style ThemeOverlay_AppCompat_Dialog
 style ThemeOverlay_AppCompat_Dialog_Alert
 style ThemeOverlay_AppCompat_Light
 style ThemeOverlay_Design_TextInputEditText
+style ThemeOverlay_HanaTransaction_TextInputLayout
 style ThemeOverlay_Material3
 style ThemeOverlay_Material3_ActionBar
 style ThemeOverlay_Material3_AutoCompleteTextView
@@ -5164,6 +5168,8 @@ style Widget_HanaTransaction_Button_TextButton
 style Widget_HanaTransaction_CardView
 style Widget_HanaTransaction_TextInputEditText
 style Widget_HanaTransaction_TextInputLayout
+style Widget_HanaTransaction_TextInputLayout_Setup
+style Widget_HanaTransaction_TextInputLayout_Visible
 style Widget_Material3_ActionBar_Solid
 style Widget_Material3_ActionMode
 style Widget_Material3_AppBarLayout

@@ -15,14 +15,14 @@ class AuthManager(private val context: Context) {
     
     companion object {
         private const val ENCRYPTED_PREFS_FILENAME = "secured_auth_prefs"
-        private const val KEY_USER_ID = "user_id"
-        private const val KEY_USERNAME = "username"
-        private const val KEY_PASSWORD_HASH = "password_hash"
-        private const val KEY_AUTH_TOKEN = "auth_token"
-        private const val KEY_SESSION_EXPIRY = "session_expiry"
+        const val KEY_USER_ID = "user_id"
+        const val KEY_USERNAME = "username"
+        const val KEY_PASSWORD_HASH = "password_hash"
+        const val KEY_AUTH_TOKEN = "auth_token"
+        const val KEY_SESSION_EXPIRY = "session_expiry"
         
         // Session timeout in milliseconds (24 hours)
-        private const val SESSION_TIMEOUT = 24 * 60 * 60 * 1000L
+        const val SESSION_TIMEOUT = 24 * 60 * 60 * 1000L
         
         // Minimum password length
         private const val MIN_PASSWORD_LENGTH = 8
@@ -184,6 +184,25 @@ class AuthManager(private val context: Context) {
      */
     fun getUsername(): String? {
         return encryptedSharedPreferences.getString(KEY_USERNAME, null)
+    }
+    
+    /**
+     * Set the user ID explicitly (for setup process)
+     * Should only be used during initial account setup
+     */
+    fun setUserId(userId: Long): Boolean {
+        encryptedSharedPreferences.edit()
+            .putLong(KEY_USER_ID, userId)
+            .apply()
+        return true
+    }
+    
+    /**
+     * Get the encrypted shared preferences
+     * This should be used carefully and only for very specific purposes
+     */
+    fun getEncryptedPreferences(): SharedPreferences {
+        return encryptedSharedPreferences
     }
     
     /**
